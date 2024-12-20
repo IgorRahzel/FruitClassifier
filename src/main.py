@@ -44,12 +44,12 @@ def main():
     # Configurações iniciais
     SEED = 42
     DEVICE = setup_environment(SEED)
-    TRAINING_PATH = "archive/fruits-360_dataset_100x100/fruits-360/Training"
-    TEST_PATH = "archive/fruits-360_dataset_100x100/fruits-360/Test"
+    TRAINING_PATH = "data/fruits-360_dataset_100x100/fruits-360/Training"
+    TEST_PATH = "data/fruits-360_dataset_100x100/fruits-360/Test"
     FRUIT_LIST = ['Apple Red 1', 'Banana 1', 'Maracuja 1']
     NUM_CLASSES = len(FRUIT_LIST)
     BATCH_SIZE = 32
-    EPOCHS = 3
+    EPOCHS = 5
     LEARNING_RATE = 0.001
 
     # Diretório para salvar o modelo
@@ -70,7 +70,7 @@ def main():
 
     # Inicializar o modelo
     model = ResNet18(num_classes=NUM_CLASSES).to(DEVICE)
-    optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)
+    optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE,weight_decay=0.01)
     criterion = nn.CrossEntropyLoss()
 
     # Treinamento e avaliação
