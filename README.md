@@ -18,7 +18,7 @@ Este é um projeto de classificação de frutas utilizando uma rede neural convo
 3. [Pré-processamento dos Dados](#pré-processamento-dos-dados)
 4. [Visualizando os Resultados](#visualizando-os-resultados)
 5. [Arquitetura do Modelo](#arquitetura-do-modelo)
-
+6. [Resultados](#resultados)
 
 # Estrutura do Repositório
 ```bash
