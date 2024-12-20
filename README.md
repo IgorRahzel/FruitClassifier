@@ -24,7 +24,6 @@ Este é um projeto de classificação de frutas utilizando uma rede neural convo
 ```bash
 FruitClassifier/
 ├── src/                        # Código fonte do projeto
-│   ├── __init__.py             # Arquivo de inicialização do pacote
 │   ├── main.py                 # Script principal para treinar e avaliar o modelo
 │   ├── load_data.py            # Classe e funções para carregar e pré-processar os dados
 │   ├── cnn_model.py            # Definição do modelo CNN (ResNet18 ajustada)
@@ -119,13 +118,6 @@ Para adaptar a `ResNet-18` à tarefa de classificação de frutas, algumas alter
 3. **Compatibilidade com os Dados**:
    - As imagens do conjunto de dados foram redimensionadas para 224x224 pixels, garantindo compatibilidade com a entrada esperada pela `ResNet-18`.
    - A normalização dos dados foi realizada para alinhar as imagens aos valores utilizados na rede pré-treinada.
-
-## Vantagens da ResNet-18 no Projeto
-- **Eficiência Computacional**: A ResNet-18 é relativamente leve e pode ser treinada em tempos razoáveis, mesmo em GPUs moderadas.
-- **Generalização**: O uso de um modelo pré-treinado melhora a capacidade de generalização da rede, especialmente em datasets menores como o `Fruits 360`.
-- **Redução de Overfitting**: A utilização de conexões residuais e data augmentation ajuda a evitar que o modelo memorize os dados de treinamento, melhorando o desempenho no conjunto de teste.
-
-A combinação dessas características faz da `ResNet-18` uma escolha ideal para este projeto, equilibrando desempenho e eficiência em termos de treinamento e inferência.
 
 # Resultados
 
