@@ -42,7 +42,8 @@ FruitClassifier/
 │   ├── loss_acc.png            # Gráficos de loss e acurácia durante o treinamento
 │   └── results.png             # Exemplos de previsões no conjunto de teste
 │
-├── requirements.txt             # Lista de dependências do projeto
+├── requirements.txt              # Lista de dependências do projeto
+├── .gitignore                   # Remove arquivos desnecessários
 ├── README.md                    # Documentação do projeto
 
 ```
@@ -56,10 +57,15 @@ Certifique-se de ter o conjunto de dados Fruits 360 Dataset baixado e descompact
  2. **Treinando o Modelo**
 O script main.py é o ponto de entrada para treinar o modelo. Ele carrega os dados, define os hiperparâmetros, treina o modelo e salva os resultados.
 
-Para treinar o modelo, execute:
+Para treinar o modelo, execute o comando abiaxo em sistemas operacionais Linux/macOS:
 ```bash
 python3 src/main.py
 ```
+ou execute, o senguinte comando no Windows:
+```bash
+python src/main.py
+```
+
 Este script irá:
 - Carregar os dados de treinamento e teste.
 - Definir a arquitetura do modelo (ResNet18).
@@ -123,7 +129,7 @@ A combinação dessas características faz da `ResNet-18` uma escolha ideal para
 
 # Resultados
 
-Como o conjunto de dados obtidos após a seleção dos três tipos de frutas é pequeno, 1472 e 496 imagens para treinamento e teste respectivamente, mesmo considerando as transformaçoes realizadas nas imagens durante a etapa de treinamento, o modelo conseguiu obter **100% de acurácia** nos casos de treino e teste com apenas 3 épocas de treinamento.
+Como o conjunto de dados obtidos após a seleção dos três tipos de frutas é pequeno, 1472 e 496 imagens para treinamento e teste respectivamente, mesmo considerando as transformaçoes realizadas nas imagens durante a etapa de treinamento, o modelo conseguiu obter aproximadamente **95% de acurácia** nos de teste com apenas 5 épocas de treinamento e fazendo uso de regularização **L2**,indicado no parâmetro *weight_decay* do *optimizer*.
 
 Abaixo são apresentados os gráficos da perda e da acurácia do modelo para cada uma das épocas:
 ![loss_acc](./imgs/loss_acc.png)
