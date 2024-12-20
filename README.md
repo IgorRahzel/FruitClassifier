@@ -1,6 +1,8 @@
 # FruitClassifier
 Este é um projeto de classificação de frutas utilizando uma rede neural convolucional (CNN) baseada na arquitetura ResNet18. O objetivo do projeto é classificar imagens de frutas em diferentes categorias. Este repositório contém o código necessário para treinar e avaliar o modelo, além de visualizações de resultados.
 
+o dataset utilizada está disponível no [Kaggle](https://www.kaggle.com/datasets/moltean/fruits), para este trabalho utilizou-se a pasta contendo imagens de dimensão (100x100).
+
 ## Tabela de Conteúdos
 1. [Estrutura do Repositório](#estrutura-do-repositório)
 2. [Como Executar](#como-executar)
@@ -129,7 +131,3 @@ Abaixo são apresentados os gráficos da perda e da acurácia do modelo para cad
 Por fim apresentamos uma amostra aleatória de 25 frutas do conjunto de teste, cada uma das imagens é acompanhada do seu rótulo verdadeiro e o rótulo predito pelo modelo.
 
 ![Resultados do Modelo](./imgs/results.png)
-
-
-
-

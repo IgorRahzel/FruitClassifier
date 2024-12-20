@@ -18,7 +18,7 @@ def visualize_fruits(dir_path, fruit_list, output_dir="imgs"):
     output_path = get_output_path(output_dir, 'fruits.png')
     
     # Cria o gráfico de visualização
-    _, axes = plt.subplots(len(fruit_list), 5, figsize=(15, 15))
+    _, axes = plt.subplots(len(fruit_list), 5, figsize=(10, 10))
     for i, fruit in enumerate(fruit_list):
         fruit_folder_path = os.path.join(dir_path, fruit)
         for j, image_file in enumerate(os.listdir(fruit_folder_path)[:5]):
