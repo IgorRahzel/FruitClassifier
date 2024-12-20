@@ -119,13 +119,6 @@ Para adaptar a `ResNet-18` à tarefa de classificação de frutas, algumas alter
    - As imagens do conjunto de dados foram redimensionadas para 224x224 pixels, garantindo compatibilidade com a entrada esperada pela `ResNet-18`.
    - A normalização dos dados foi realizada para alinhar as imagens aos valores utilizados na rede pré-treinada.
 
-## Vantagens da ResNet-18 no Projeto
-- **Eficiência Computacional**: A ResNet-18 é relativamente leve e pode ser treinada em tempos razoáveis, mesmo em GPUs moderadas.
-- **Generalização**: O uso de um modelo pré-treinado melhora a capacidade de generalização da rede, especialmente em datasets menores como o `Fruits 360`.
-- **Redução de Overfitting**: A utilização de conexões residuais e data augmentation ajuda a evitar que o modelo memorize os dados de treinamento, melhorando o desempenho no conjunto de teste.
-
-A combinação dessas características faz da `ResNet-18` uma escolha ideal para este projeto, equilibrando desempenho e eficiência em termos de treinamento e inferência.
-
 # Resultados
 
 Como o conjunto de dados obtidos após a seleção dos três tipos de frutas é pequeno, 1472 e 496 imagens para treinamento e teste respectivamente, mesmo considerando as transformaçoes realizadas nas imagens durante a etapa de treinamento, o modelo conseguiu obter aproximadamente **95% de acurácia** nos de teste com apenas 5 épocas de treinamento e fazendo uso de regularização **L2**,indicado no parâmetro *weight_decay* do *optimizer*.
