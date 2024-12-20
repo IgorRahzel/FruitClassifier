@@ -24,7 +24,6 @@ Este é um projeto de classificação de frutas utilizando uma rede neural convo
 ```bash
 FruitClassifier/
 ├── src/                        # Código fonte do projeto
-│   ├── __init__.py             # Arquivo de inicialização do pacote
 │   ├── main.py                 # Script principal para treinar e avaliar o modelo
 │   ├── load_data.py            # Classe e funções para carregar e pré-processar os dados
 │   ├── cnn_model.py            # Definição do modelo CNN (ResNet18 ajustada)
